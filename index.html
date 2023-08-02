@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Researcher Homepage</title>
+    <style>
+        body {font-family: Arial, sans-serif;}
+        h1 {color: #333;}
+        h2 {color: #666;}
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="name"></h1>
+        <h3 id="title"></h3>
+    </header>
+
+    <section>
+        <h2>About Me</h2>
+        <p id="about"></p>
+    </section>
+
+    <section>
+        <h2>Research Interests</h2>
+        <p id="research_interests"></p>
+    </section>
+
+    <section>
+        <h2>Publications</h2>
+        <ul id="publications"></ul>
+    </section>
+
+    <section>
+        <h2>Education and Experience</h2>
+        <ul id="education_experience"></ul>
+    </section>
+
+    <section>
+        <h2>Awards and Recognition</h2>
+        <ul id="awards"></ul>
+    </section>
+
+    <section>
+        <h2>Contact Information</h2>
+        <p>Email: <span id="email"></span></p>
+        <p>LinkedIn: <span id="linkedin"></span></p>
+        <p>Twitter: <span id="twitter"></span></p>
+    </section>
+
+    <script>
+        fetch('/mnt/data/researcher_data.json')
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('name').textContent = data.name;
+            document.getElementById('title').textContent = data.title;
+            document.getElementById('about').textContent = data.about;
+            document.getElementById('research_interests').textContent = data.research_interests;
+            data.publications.forEach(item => {
+                document.getElementById('publications').innerHTML += '<li>' + item + '</li>';
+            });
+            data.education_experience.forEach(item => {
+                document.getElementById('education_experience').innerHTML += '<li>' + item + '</li>';
+            });
+            data.awards.forEach(item => {
+                document.getElementById('awards').innerHTML += '<li>' + item + '</li>';
+            });
+            document.getElementById('email').textContent = data.contact.email;
+            document.getElementById('linkedin').textContent = data.contact.linkedin;
+            document.getElementById('twitter').textContent = data.contact.twitter;
+        });
+    </script>
+</body>
+</html>
