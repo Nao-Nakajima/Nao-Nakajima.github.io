@@ -1,1 +1,8 @@
-{"name": "XXX", "title": "XXX", "about": "XXX", "research_interests": "XXX", "publications": ["XXX", "XXX", "XXX"], "education_experience": ["XXX", "XXX", "XXX"], "awards": ["XXX", "XXX", "XXX"], "contact": {"email": "XXX", "linkedin": "XXX", "twitter": "XXX"}}
+{"name": "XXX", 
+  "title": "XXX", 
+  "about": "XXX", 
+  "research_interests": "XXX", 
+  "publications": ["XXX", "XXX", "XXX"], 
+  "education_experience": ["XXX", "XXX", "XXX"], 
+  "awards": ["XXX", "XXX", "XXX"], 
+  "contact": {"email": "XXX"}}
