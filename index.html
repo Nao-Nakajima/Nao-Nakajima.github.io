@@ -48,7 +48,7 @@
     </section>
 
     <script>
-        fetch('/mnt/data/researcher_data.json')
+        fetch('researcher_data.json')
         .then(response => response.json())
         .then(data => {
             document.getElementById('name').textContent = data.name;
