@@ -1,9 +1,8 @@
 {"name": "XXX", 
   "title": "XXX", 
   "about": "XXX", 
-  "research_interests": "XXX", 
+  "profile_picture": "XXX.jpg", 
   "publications": ["XXX", "XXX", "XXX"], 
   "education": ["XXX", "XXX", "XXX"], 
-  "awards": ["XXX", "XXX"],
-  "contact": {"email": "XXX"}, 
-  "profile_picture": "XXX.jpg"}
+  "awards": ["XXX", "XXX", "XXX"], 
+  "contact": {"email": "XXX", "phone": "XXX"}}
