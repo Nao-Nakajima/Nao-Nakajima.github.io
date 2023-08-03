@@ -81,12 +81,12 @@ button:active {
     background-color: transparent;
 }
 
-button:before {
+button::before {
     content: "▶";
     position: relative;
 }
 
-button.rotate:before {
+button.rotate::before {
     transform: rotate(90deg);
 }
 
