@@ -45,6 +45,10 @@ section ul {
     padding: 0;
 }
 
+.hidden {
+    display: none;
+}
+
 #profile_picture {
     width: 100px;
     height: 100px;
@@ -53,6 +57,24 @@ section ul {
     margin: 10px auto;
     background-color: #fff;
     background-size: cover;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #ddd;
+    border: none;
+    cursor: pointer;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:active {
+    background-color: #bbb;
 }
 
 @media (max-width: 768px) {
