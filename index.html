@@ -32,6 +32,11 @@
         <button onclick="toggle('awards')"></button>
         <ul id="awards" class="hidden"></ul>
     </section>
+    <section>
+        <h2>Contact</h2>
+        <p id="email">XXX</p>
+        <p id="phone">XXX</p>
+    </section>
     <script>
         function toggle(id) {
             let element = document.getElementById(id);
@@ -61,6 +66,8 @@
                     li.textContent = award;
                     document.getElementById("awards").append(li);
                 });
+                document.getElementById("email").textContent = data.contact.email;
+                document.getElementById("phone").textContent = data.contact.phone;
             });
     </script>
 </body>
