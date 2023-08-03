@@ -64,13 +64,15 @@ section ul {
 button {
     display: inline-block;
     padding: 0;
-    background-color: transparent;
+    background-color: #000;
+    color: #fff;
     border: none;
     cursor: pointer;
     width: 20px;
     height: 20px;
     margin-left: 10px;
     font-size: 20px;
+    transition: transform 0.3s ease;
 }
 
 button:focus {
@@ -78,16 +80,15 @@ button:focus {
 }
 
 button:active {
-    background-color: transparent;
+    background-color: #000;
 }
 
 button::before {
     content: "▶";
     position: relative;
-    transition: transform 0.3s ease;
 }
 
-button.rotate::before {
+button.rotate {
     transform: rotate(90deg);
 }
 
