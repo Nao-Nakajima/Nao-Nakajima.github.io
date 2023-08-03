@@ -63,10 +63,13 @@ section ul {
 
 button {
     display: inline-block;
-    padding: 10px;
-    background-color: #ddd;
+    padding: 0;
+    background-color: transparent;
     border: none;
     cursor: pointer;
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
 }
 
 button:focus {
@@ -74,7 +77,17 @@ button:focus {
 }
 
 button:active {
-    background-color: #bbb;
+    background-color: transparent;
+}
+
+button:before {
+    content: "▶";
+    position: relative;
+    font-size: 20px;
+}
+
+button.rotate:before {
+    transform: rotate(90deg);
 }
 
 @media (max-width: 768px) {
