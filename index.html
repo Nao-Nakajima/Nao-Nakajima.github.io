@@ -1,71 +1,102 @@
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Researcher Homepage</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-    <header>
-        <h1 id="name"></h1>
-        <h3 id="title"></h3>
-    </header>
+body {
+    font-family: 'Arial', sans-serif;
+    color: #000;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-    <section>
-        <h2>About Me</h2>
-        <div id="profile_picture"></div>
-        <p id="about"></p>
-    </section>
+header {
+    width: 100%;
+    padding: 20px 0;
+    background-color: #e0e0e0;
+    text-align: center;
+}
 
-    <section>
-        <h2>Research Interests</h2>
-        <p id="research_interests"></p>
-    </section>
+header h1 {
+    font-size: 2em;
+}
 
-    <section>
-        <h2>Publications</h2> <button onclick="document.getElementById('publications').classList.toggle('hidden');">Toggle</button>
-        <ul id="publications" class="hidden"></ul>
-    </section>
+header h3 {
+    font-size: 1.2em;
+    color: #666;
+}
 
-    <section>
-        <h2>Education and Experience</h2> <button onclick="document.getElementById('education_experience').classList.toggle('hidden');">Toggle</button>
-        <ul id="education_experience" class="hidden"></ul>
-    </section>
+section {
+    width: 80%;
+    max-width: 800px;
+    margin-bottom: 20px;
+}
 
-    <section>
-        <h2>Awards and Recognition</h2> <button onclick="document.getElementById('awards').classList.toggle('hidden');">Toggle</button>
-        <ul id="awards" class="hidden"></ul>
-    </section>
+section h2 {
+    color: #333;
+    display: inline-block;
+    margin-right: 10px;
+}
 
-    <section>
-        <h2>Contact Information</h2>
-        <p>Email: <span id="email"></span></p>
-        <p>LinkedIn: <span id="linkedin"></span></p>
-        <p>Twitter: <span id="twitter"></span></p>
-    </section>
+section p, section ul {
+    text-align: justify;
+}
 
-    <script>
-        fetch('data.json')
-        .then(response => response.json())
-        .then(data => {
-            document.getElementById('name').textContent = data.name;
-            document.getElementById('title').textContent = data.title;
-            document.getElementById('about').textContent = data.about;
-            document.getElementById('research_interests').textContent = data.research_interests;
-            data.publications.forEach(item => {
-                document.getElementById('publications').innerHTML += '<li>' + item + '</li>';
-            });
-            data.education_experience.forEach(item => {
-                document.getElementById('education_experience').innerHTML += '<li>' + item + '</li>';
-            });
-            data.awards.forEach(item => {
-                document.getElementById('awards').innerHTML += '<li>' + item + '</li>';
-            });
-            document.getElementById('email').textContent = data.contact.email;
-            document.getElementById('linkedin').textContent = data.contact.linkedin;
-            document.getElementById('twitter').textContent = data.contact.twitter;
-            document.getElementById('profile_picture').style.backgroundImage = 'url(' + data.profile_picture + ')';
-        });
-    </script>
-</body>
-</html>
+section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+#profile_picture {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #000;
+    border-radius: 50px;
+    margin: 10px auto;
+    background-color: #fff;
+    background-size: cover;
+}
+
+button {
+    display: inline-block;
+    padding: 10px;
+    background-color: #ddd;
+    border: none;
+    cursor: pointer;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:active {
+    background-color: #bbb;
+}
+
+@media (max-width: 768px) {
+    section {
+        width: 95%;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    header h3 {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.2em;
+    }
+
+    header h3 {
+        font-size: 0.8em;
+    }
+}
