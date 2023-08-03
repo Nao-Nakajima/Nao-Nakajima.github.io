@@ -85,6 +85,7 @@ button::before {
     content: "▶";
     position: relative;
     transition: transform 0.3s ease;
+    color: #000;
 }
 
 button.rotate::before {
