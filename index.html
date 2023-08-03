@@ -23,17 +23,17 @@
     </section>
 
     <section>
-        <h2>Publications</h2> <button onclick="document.getElementById('publications').classList.toggle('hidden');">Toggle</button>
+        <h2>Publications <button id="publications_button" onclick="toggle('publications');"></button></h2>
         <ul id="publications" class="hidden"></ul>
     </section>
 
     <section>
-        <h2>Education and Experience</h2> <button onclick="document.getElementById('education_experience').classList.toggle('hidden');">Toggle</button>
+        <h2>Education and Experience <button id="education_experience_button" onclick="toggle('education_experience');"></button></h2>
         <ul id="education_experience" class="hidden"></ul>
     </section>
 
     <section>
-        <h2>Awards and Recognition</h2> <button onclick="document.getElementById('awards').classList.toggle('hidden');">Toggle</button>
+        <h2>Awards and Recognition <button id="awards_button" onclick="toggle('awards');"></button></h2>
         <ul id="awards" class="hidden"></ul>
     </section>
 
@@ -66,6 +66,13 @@
             document.getElementById('twitter').textContent = data.contact.twitter;
             document.getElementById('profile_picture').style.backgroundImage = 'url(' + data.profile_picture + ')';
         });
+
+        function toggle(id) {
+            var element = document.getElementById(id);
+            var button = document.getElementById(id + '_button');
+            element.classList.toggle('hidden');
+            button.classList.toggle('rotate');
+        }
     </script>
 </body>
 </html>
