@@ -70,6 +70,7 @@ button {
     width: 20px;
     height: 20px;
     margin-left: 10px;
+    font-size: 20px;
 }
 
 button:focus {
@@ -83,7 +84,6 @@ button:active {
 button:before {
     content: "▶";
     position: relative;
-    font-size: 20px;
 }
 
 button.rotate:before {
