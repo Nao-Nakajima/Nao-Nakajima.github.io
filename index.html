@@ -24,17 +24,20 @@
 
     <section>
         <h2>Publications</h2>
-        <ul id="publications"></ul>
+        <button onclick="document.getElementById('publications').classList.toggle('hidden');">Toggle Publications</button>
+        <ul id="publications" class="hidden"></ul>
     </section>
 
     <section>
         <h2>Education and Experience</h2>
-        <ul id="education_experience"></ul>
+        <button onclick="document.getElementById('education_experience').classList.toggle('hidden');">Toggle Education and Experience</button>
+        <ul id="education_experience" class="hidden"></ul>
     </section>
 
     <section>
         <h2>Awards and Recognition</h2>
-        <ul id="awards"></ul>
+        <button onclick="document.getElementById('awards').classList.toggle('hidden');">Toggle Awards and Recognition</button>
+        <ul id="awards" class="hidden"></ul>
     </section>
 
     <section>
@@ -66,10 +69,6 @@
             document.getElementById('twitter').textContent = data.contact.twitter;
             document.getElementById('profile_picture').style.backgroundImage = 'url(' + data.profile_picture + ')';
         });
-    </script>
-</body>
-</html>
-
     </script>
 </body>
 </html>
